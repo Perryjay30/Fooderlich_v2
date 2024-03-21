@@ -17,16 +17,10 @@ class RecipesGridView extends StatelessWidget {
         child: GridView.builder(
             itemCount: recipes.length,
             gridDelegate:
-            const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 500.0),
-            //   const SliverGridDelegateWithMaxCrossAxisExtent (
-            //     maxCrossAxisExtent: 300,
-            //     mainAxisSpacing: 16,
-            //     crossAxisSpacing: 16,
-            //     childAspectRatio: 1,
-            // ),
-            // const SliverGridDelegateWithFixedCrossAxisCount(
-            //     crossAxisCount: 2),
+            // const SliverGridDelegateWithMaxCrossAxisExtent(
+            //     maxCrossAxisExtent: 500.0),
+            const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
             itemBuilder: (context, index) {
               final simpleRecipe = recipes[index];
               return RecipeThumbnail(recipe: simpleRecipe);
